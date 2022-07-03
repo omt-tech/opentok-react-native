@@ -96,6 +96,7 @@ class OTSessionManager: RCTEventEmitter {
             publisher.publishAudio = Utils.sanitizeBooleanProperty(properties["publishAudio"] as Any);
             publisher.publishVideo = Utils.sanitizeBooleanProperty(properties["publishVideo"] as Any);
             publisher.audioLevelDelegate = self;
+            publisher.viewScaleBehavior = .fit;
             callback([NSNull()]);
         }
     }
@@ -144,6 +145,7 @@ class OTSessionManager: RCTEventEmitter {
             session.subscribe(subscriber, error: &error)
             subscriber.subscribeToAudio = Utils.sanitizeBooleanProperty(properties["subscribeToAudio"] as Any);
             subscriber.subscribeToVideo = Utils.sanitizeBooleanProperty(properties["subscribeToVideo"] as Any);
+            subscriber.viewScaleBehavior = .fit;
             if let err = error {
                 self.dispatchErrorViaCallback(callback, error: err)
             } else {
