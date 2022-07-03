@@ -40,7 +40,7 @@ public class OTPublisherLayout extends FrameLayout{
                 zOrder = androidZOrderMap.get(mPublisher.getSession().getSessionId());
             }
             mPublisher.setStyle(BaseVideoRenderer.STYLE_VIDEO_SCALE,
-                    BaseVideoRenderer.STYLE_VIDEO_FILL);
+                    BaseVideoRenderer.STYLE_VIDEO_FIT);
             FrameLayout mPublisherViewContainer = new FrameLayout(getContext());
             if (pubOrSub.equals("publisher") && mPublisher.getView() instanceof GLSurfaceView) {
                 if (zOrder.equals("mediaOverlay")) {
