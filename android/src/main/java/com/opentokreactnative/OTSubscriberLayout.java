@@ -46,7 +46,7 @@ public class OTSubscriberLayout extends FrameLayout{
                 ((ViewGroup)mSubscriber.getView().getParent()).removeView(mSubscriber.getView());
             }
             mSubscriber.setStyle(BaseVideoRenderer.STYLE_VIDEO_SCALE,
-                BaseVideoRenderer.STYLE_VIDEO_FILL);
+                BaseVideoRenderer.STYLE_VIDEO_FIT);
             if (pubOrSub.equals("subscriber") && mSubscriber.getView() instanceof GLSurfaceView) {
                 if (zOrder.equals("mediaOverlay")) {
                     ((GLSurfaceView) mSubscriber.getView()).setZOrderMediaOverlay(true);
